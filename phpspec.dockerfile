@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpspec:latest" --file phpspec.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpspec:latest" --file phpspec.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpspec" "richvred/phpspec:latest" run
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpspec" "rvannauker/phpspec:latest" run
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phan:latest" --file phan.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phan:latest" --file phan.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phan" "richvred/phan:latest" --output-mode text --signature-compatibility --directory {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phan" "rvannauker/phan:latest" --output-mode text --signature-compatibility --directory {destination}
 # PACKAGE: Phan
 # PACKAGE REPOSITORY: https://github.com/etsy/phan
 FROM alpine:latest

@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpdcd:latest" --file phpdcd.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpdcd:latest" --file phpdcd.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpdcd" "richvred/phpdcd:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpdcd" "rvannauker/phpdcd:latest" {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpanalysis:latest" --file phpanalysis.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpanalysis:latest" --file phpanalysis.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpanalysis" "richvred/phpanalysis:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpanalysis" "rvannauker/phpanalysis:latest" {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/tuli:latest" --file tuli.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/tuli:latest" --file tuli.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="tuli" "richvred/tuli:latest" analyze {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="tuli" "rvannauker/tuli:latest" analyze {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

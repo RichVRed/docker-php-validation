@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phploc:latest" --file phploc.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phploc:latest" --file phploc.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phploc" "richvred/phploc:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phploc" "rvannauker/phploc:latest" {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

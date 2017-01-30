@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/pdepend:latest" --file pdepend.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/pdepend:latest" --file pdepend.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="pdepend" "richvred/pdepend:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="pdepend" "rvannauker/pdepend:latest" {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

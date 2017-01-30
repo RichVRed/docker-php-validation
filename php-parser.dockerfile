@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/php-parser:latest" --file php-parser.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-parser:latest" --file php-parser.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-parser" "richvred/php-parser:latest" {file}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-parser" "rvannauker/php-parser:latest" {file}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

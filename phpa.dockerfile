@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpa:latest" --file phpa.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpa:latest" --file phpa.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpa" "richvred/phpa:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpa" "rvannauker/phpa:latest" {destination}
 # PACKAGE: PHP Assumptions
 # PACKAGE REPOSITORY: https://github.com/rskuipers/php-assumptions
 FROM alpine:latest

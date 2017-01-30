@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpmd:latest" --file phpmd.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpmd:latest" --file phpmd.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpmd" "richvred/phpmd:latest" {destination} text cleancode,codesize,controversial,design,naming,unusedcode
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpmd" "rvannauker/phpmd:latest" {destination} text cleancode,codesize,controversial,design,naming,unusedcode
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

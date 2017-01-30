@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpca:latest" --file phpca.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpca:latest" --file phpca.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpca" "richvred/phpca:latest" --no-progress {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpca" "rvannauker/phpca:latest" --no-progress {destination}
 # PACKAGE: PhpCodeAnalyzer
 # PACKAGE REPOSITORY: https://github.com/wapmorgan/PhpCodeAnalyzer
 FROM alpine:latest

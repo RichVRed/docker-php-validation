@@ -1,9 +1,9 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/php-formatter:latest" --file php-formatter.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-formatter:latest" --file php-formatter.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "richvred/php-formatter:latest" formatter:use:sort {destination}
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "richvred/php-formatter:latest" formatter:strict:fix {destination}
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "richvred/php-formatter:latest" formatter:header:fix {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:use:sort {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:strict:fix {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:header:fix {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

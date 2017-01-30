@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpstan:latest" --file phpstan.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpstan:latest" --file phpstan.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpstan" "richvred/phpstan:latest" analyse --level=5 --no-progress --no-interaction -vvv {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpstan" "rvannauker/phpstan:latest" analyse --level=5 --no-progress --no-interaction -vvv {destination}
 # PACKAGE: PHPStan - PHP Static Analysis Tool
 # PACKAGE REPOSITORY: https://github.com/phpstan/phpstan
 FROM alpine:latest

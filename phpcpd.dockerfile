@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpcpd:latest" --file phpcpd.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpcpd:latest" --file phpcpd.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpcpd" "richvred/phpcpd:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpcpd" "rvannauker/phpcpd:latest" {destination}
 # PACKAGE: PHP Copy/Paste Detector (PHPCPD)
 # PACKAGE REPOSITORY: https://github.com/sebastianbergmann/phpcpd
 FROM alpine:latest

@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpunit:latest" --file phpunit.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpunit:latest" --file phpunit.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpunit" "richvred/phpunit:latest"
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpunit" "rvannauker/phpunit:latest"
 # PACKAGE: PHPUnit
 # PACKAGE REPOSITORY: https://phpunit.de
 # DOCKER REPOSITORY: https://github.com/JulienBreux/phpunit-docker/blob/master/5.7.5/Dockerfile

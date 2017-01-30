@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/psalm:latest" --file psalm.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/psalm:latest" --file psalm.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="psalm" "richvred/psalm:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="psalm" "rvannauker/psalm:latest" {destination}
 # PACKAGE: Psalm
 # PACKAGE REPOSITORY: https://github.com/vimeo/psalm
 FROM alpine:latest

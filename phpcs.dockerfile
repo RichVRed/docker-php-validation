@@ -1,7 +1,7 @@
 # BUILD:
-# sudo docker build --force-rm --tag "richvred/phpcs:latest" --file phpcs.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpcs:latest" --file phpcs.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpcs" "richvred/phpcs:latest" --standard="PSR2" -v {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpcs" "rvannauker/phpcs:latest" --standard="PSR2" -v {destination}
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 
