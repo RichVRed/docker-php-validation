@@ -1,0 +1,103 @@
+# Composer stores all downloaded packages in the vendor/ directory.
+# Composer bin directory is set to bin/ directory.
+cache:
+  paths:
+  - vendor/
+  - bin/
+
+image: php:7.0-cli
+
+before_script:
+  - composer install
+
+stages:
+  - 'composer'
+  - 'fixer'
+  - 'lint'
+  - 'test T.D.D.'
+  - 'test B.D.D.'
+
+composer:
+  stage: 'composer'
+  script:
+    - composer validate
+
+php-formatter:
+  stage: 'fixer'
+  script:
+    - php vendor/bin/php-formatter formatter:use:sort src/
+    - php vendor/bin/php-formatter formatter:strict:fix src/
+    - php vendor/bin/php-formatter formatter:header:fix src/
+
+phpmd:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpmd src text cleancode,codesize,controversial,design,naming,unusedcode
+
+phpcs:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpcs --standard=PSR2 src
+
+phpcpd:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpcpd src
+
+phpdcd:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpdcd src
+
+# "ovr/phpsa": "0.6.2"
+#phpsa:
+#  stage: 'lint'
+#  script:
+#    - php vendor/bin/phpsa check src
+
+# "rskuipers/php-assumptions":"0.5.0"
+#phpa:
+#  stage: 'lint'
+#  script:
+#    - php vendor/bin/phpa src
+
+# "vimeo/psalm": "0.3.15"
+psalm:
+  stage: 'lint'
+  script:
+    - php vendor/bin/psalm
+
+phpca:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpca --no-progress
+
+php-coupling-detector:
+  stage: 'lint'
+  script:
+    - php vendor/bin/php-coupling-detector detect src --config-file=.php_cd --format=dot
+
+parse:
+  stage: 'lint'
+  script:
+    - php vendor/bin/parse
+
+phpstan:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phpstan analyse --level=5 --no-progress --no-interaction -vvv src
+
+phploc:
+  stage: 'lint'
+  script:
+    - php vendor/bin/phploc src
+
+phpunit:
+  stage: 'test T.D.D.'
+  script:
+    - php vendor/bin/phpunit tests
+
+phpspec:
+  stage: 'test B.D.D.'
+  script:
+    - php vendor/bin/phpspec run

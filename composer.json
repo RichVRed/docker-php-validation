@@ -1,0 +1,67 @@
+{
+    "name": "fireengine/sharding",
+    "description": "Shard maintenance utilities",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Ivan Farafontov",
+            "email": "ivan.farafontov@directenergy.com"
+        },
+        {
+            "name": "Richard Vannauker",
+            "email": "richard.vannauker@directenergy.com"
+        }
+    ],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "FireEngine\\Utility\\Sharding\\": "src/",
+            "FireEngine\\Utility\\Test\\Sharding\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.6",
+        "ext-mcrypt": "*",
+        "symfony/debug": "^3.0",
+        "symfony/console": "^3.0",
+        "symfony/config": "^3.0",
+        "symfony/yaml": "^3.0",
+        "doctrine/dbal": "^2.5",
+        "symfony/property-access": "^3.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.0",
+        "giorgiosironi/eris": "0.8.0",
+        "phpspec/phpspec": "3.2.2",
+        "squizlabs/php_codesniffer": "2.*",
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "2.0.4",
+        "sebastian/phpdcd": "1.0.2",
+        "phploc/phploc": "3.0.1",
+        "pdepend/pdepend" : "2.5.0",
+        "phpstan/phpstan": "0.6.1",
+        "lmz/phpanalysis": "1.0.3",
+        "vimeo/psalm": "0.3.15",
+        "docopt/docopt": "1.0.0-rc1",
+        "wapmorgan/php-code-analyzer": "1.0.1",
+        "etsy/phan": "0.8.2",
+        "akeneo/php-coupling-detector": "0.1.*",
+        "mmoreram/php-formatter": "dev-master"
+    },
+    "config": {
+        "bin-dir": "vendor/bin"
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "config/sharding.yml"
+        },
+        "branch-alias": null
+    }
+}
