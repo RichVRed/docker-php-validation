@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/php-coupling-detector:latest" --file php-coupling-detector.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-coupling-detector" --file php-coupling-detector.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-coupling-detector" "rvannauker/php-coupling-detector:latest" detect {destination} --config-file=.php_cd --format=dot
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-coupling-detector" "rvannauker/php-coupling-detector" detect {destination} --config-file=.php_cd --format=dot
+# PACKAGE: PHP Coupling Detector
+# PACKAGE REPOSITORY: https://github.com/akeneo/php-coupling-detector.git
+# DESCRIPTION: Detect all the coupling issues of your project with respect to the coupling rules you have defined.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

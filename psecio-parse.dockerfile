@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/psecio-parse:latest" --file psecio-parse.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/psecio-parse" --file psecio-parse.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="psecio-parse" "rvannauker/psecio-parse:latest" -vvv scan {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="psecio-parse" "rvannauker/psecio-parse" -vvv scan {destination}
+# PACKAGE: Parse
+# PACKAGE REPOSITORY: https://github.com/psecio/parse.git
+# DESCRIPTION: A Static Security Scanner
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

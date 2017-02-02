@@ -1,9 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/psalm:latest" --file psalm.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/psalm" --file psalm.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="psalm" "rvannauker/psalm:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="psalm" "rvannauker/psalm" {destination}
 # PACKAGE: Psalm
-# PACKAGE REPOSITORY: https://github.com/vimeo/psalm
+# PACKAGE REPOSITORY: https://github.com/vimeo/psalm.git
+# DESCRIPTION: Psalm is a static analysis tool for finding errors in PHP applications
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

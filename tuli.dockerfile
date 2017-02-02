@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/tuli:latest" --file tuli.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/tuli" --file tuli.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="tuli" "rvannauker/tuli:latest" analyze {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="tuli" "rvannauker/tuli" analyze {destination}
+# PACKAGE: Tuli
+# PACKAGE REPOSITORY: https://github.com/ircmaxell/Tuli.git
+# DESCRIPTION: A static analysis engine
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

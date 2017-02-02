@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpspec:latest" --file phpspec.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpspec" --file phpspec.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpspec" "rvannauker/phpspec:latest" run
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpspec" "rvannauker/phpspec" run
+# PACKAGE: phpspec
+# PACKAGE REPOSITORY: https://github.com/phpspec/phpspec
+# DESCRIPTION: SpecBDD Framework for PHP
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

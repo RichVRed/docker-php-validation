@@ -1,9 +1,12 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/php-formatter:latest" --file php-formatter.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-formatter" --file php-formatter.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:use:sort {destination}
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:strict:fix {destination}
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter:latest" formatter:header:fix {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter" formatter:use:sort {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter" formatter:strict:fix {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-formatter" "rvannauker/php-formatter" formatter:header:fix {destination}
+# PACKAGE: PHP Formatter
+# PACKAGE REPOSITORY: https://github.com/mmoreram/php-formatter.git
+# DESCRIPTION: This PHP formatter aims to provide you some bulk actions for you PHP projects to ensure their consistency
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

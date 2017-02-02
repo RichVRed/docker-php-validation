@@ -1,9 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpsa:latest" --file phpsa.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpsa" --file phpsa.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpsa" "rvannauker/phpsa:latest" check {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpsa" "rvannauker/phpsa" check {destination}
 # PACKAGE: PHPSA - Smart Analyzer for PHP
 # PACKAGE REPOSITORY: https://github.com/ovr/phpsa
+# DESCRIPTION: Smart/Static Analyzer(sis) for PHP
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

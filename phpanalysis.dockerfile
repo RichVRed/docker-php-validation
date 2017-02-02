@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpanalysis:latest" --file phpanalysis.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpanalysis" --file phpanalysis.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpanalysis" "rvannauker/phpanalysis:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpanalysis" "rvannauker/phpanalysis" {destination}
+# PACKAGE: phpanalysis
+# PACKAGE REPOSITORY: https://github.com/liumingzhij26/phpanalysis.git
+# DESCRIPTION: The PHP library for PHP Analysis
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -4,6 +4,7 @@
 # sudo docker run --rm --volume $(pwd):/workspace --name="phpca" "rvannauker/phpca:latest" --no-progress {destination}
 # PACKAGE: PhpCodeAnalyzer
 # PACKAGE REPOSITORY: https://github.com/wapmorgan/PhpCodeAnalyzer
+# DESCRIPTION: PhpCodeAnalyzer finds usage of different non-built-in extensions in your php code. This tool helps you understand how transportable your code between php installations is.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -1,9 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/php-reaper:latest" --file php-reaper.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-reaper" --file php-reaper.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-reaper" "rvannauker/php-reaper:latest" -d {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-reaper" "rvannauker/php-reaper" -d {destination}
 # PACKAGE: PHP-Reaper
-# PACKAGE REPOSITORY: https://github.com/emanuil/php-reaper
+# PACKAGE REPOSITORY: https://github.com/emanuil/php-reaper.git
+# DESCRIPTION: PHP tool to scan ADOdb code for SQL Injections
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

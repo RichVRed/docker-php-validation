@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/php-parser:latest" --file php-parser.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/php-parser" --file php-parser.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="php-parser" "rvannauker/php-parser:latest" {file}
+# sudo docker run --rm --volume $(pwd):/workspace --name="php-parser" "rvannauker/php-parser" {file}
+# PACKAGE: PHP Parser
+# PACKAGE REPOSITORY: https://github.com/nikic/PHP-Parser.git
+# DESCRIPTION: This is a PHP 5.2 to PHP 7.1 parser written in PHP. Its purpose is to simplify static code analysis and manipulation.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

@@ -1,9 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpa:latest" --file phpa.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpa" --file phpa.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpa" "rvannauker/phpa:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpa" "rvannauker/phpa" {destination}
 # PACKAGE: PHP Assumptions
-# PACKAGE REPOSITORY: https://github.com/rskuipers/php-assumptions
+# PACKAGE REPOSITORY: https://github.com/rskuipers/php-assumptions.git
+# DESCRIPTION: Tool to detect assumptions
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

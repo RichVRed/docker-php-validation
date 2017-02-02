@@ -1,10 +1,11 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpunit:latest" --file phpunit.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpunit" --file phpunit.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpunit" "rvannauker/phpunit:latest"
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpunit" "rvannauker/phpunit"
 # PACKAGE: PHPUnit
-# PACKAGE REPOSITORY: https://phpunit.de
+# PACKAGE REPOSITORY: https://github.com/sebastianbergmann/phpunit.git
 # DOCKER REPOSITORY: https://github.com/JulienBreux/phpunit-docker/blob/master/5.7.5/Dockerfile
+# DESCRIPTION: The PHP Unit Testing framework
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

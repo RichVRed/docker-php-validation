@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpmd:latest" --file phpmd.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phpmd" --file phpmd.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpmd" "rvannauker/phpmd:latest" {destination} text cleancode,codesize,controversial,design,naming,unusedcode
+# sudo docker run --rm --volume $(pwd):/workspace --name="phpmd" "rvannauker/phpmd" {destination} text cleancode,codesize,controversial,design,naming,unusedcode
+# PACKAGE: PHPMD
+# PACKAGE REPOSITORY: https://github.com/phpmd/phpmd.git
+# DESCRIPTION: PHPMD is a spin-off project of PHP Depend and aims to be a PHP equivalent of the well known Java tool PMD. PHPMD can be seen as an user friendly frontend application for the raw metrics stream measured by PHP Depend.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

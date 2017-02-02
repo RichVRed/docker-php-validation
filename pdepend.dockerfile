@@ -1,7 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/pdepend:latest" --file pdepend.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/pdepend" --file pdepend.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="pdepend" "rvannauker/pdepend:latest" {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="pdepend" "rvannauker/pdepend" {destination}
+# PACKAGE: PHP_Depend
+# PACKAGE REPOSITORY: https://github.com/pdepend/pdepend.git
+# DESCRIPTION: This tool shows you the quality of your design in the terms of extensibility, reusability and maintainability.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 

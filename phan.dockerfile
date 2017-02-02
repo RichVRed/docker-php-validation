@@ -1,9 +1,10 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phan:latest" --file phan.dockerfile .
+# sudo docker build --force-rm --tag "rvannauker/phan" --file phan.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phan" "rvannauker/phan:latest" --output-mode text --signature-compatibility --directory {destination}
+# sudo docker run --rm --volume $(pwd):/workspace --name="phan" "rvannauker/phan" --output-mode text --signature-compatibility --directory {destination}
 # PACKAGE: Phan
-# PACKAGE REPOSITORY: https://github.com/etsy/phan
+# PACKAGE REPOSITORY: https://github.com/etsy/phan.git
+# DESCRIPTION: Phan is a static analyzer for PHP. Phan prefers to avoid false-positives and attempts to prove incorrectness rather than correctness.
 FROM alpine:latest
 MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
 
