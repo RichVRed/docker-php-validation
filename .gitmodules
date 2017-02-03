@@ -1,0 +1,66 @@
+[submodule "checkmarx"]
+	path = checkmarx
+	url = https://github.com/RichVRed/docker-checkmarx.git
+[submodule "pdepend"]
+	path = pdepend
+	url = https://github.com/RichVRed/docker-pdepend.git
+[submodule "phan"]
+	path = phan
+	url = https://github.com/RichVRed/docker-phan.git
+[submodule "php-coupling-detector"]
+	path = php-coupling-detector
+	url = https://github.com/RichVRed/docker-php-coupling-detector.git
+[submodule "php-formatter"]
+	path = php-formatter
+	url = https://github.com/RichVRed/docker-php-formatter.git
+[submodule "php-parser"]
+	path = php-parser
+	url = https://github.com/RichVRed/docker-php-parser.git
+[submodule "php-reaper"]
+	path = php-reaper
+	url = https://github.com/RichVRed/docker-php-reaper.git
+[submodule "phpa"]
+	path = phpa
+	url = https://github.com/RichVRed/docker-phpa.git
+[submodule "phpanalysis"]
+	path = phpanalysis
+	url = https://github.com/RichVRed/docker-phpanalysis.git
+[submodule "phpca"]
+	path = phpca
+	url = https://github.com/RichVRed/docker-phpca.git
+[submodule "phpcpd"]
+	path = phpcpd
+	url = https://github.com/RichVRed/docker-phpcpd.git
+[submodule "phpcs"]
+	path = phpcs
+	url = https://github.com/RichVRed/docker-phpcs.git
+[submodule "phpdcd"]
+	path = phpdcd
+	url = https://github.com/RichVRed/docker-phpdcd.git
+[submodule "phploc"]
+	path = phploc
+	url = https://github.com/RichVRed/docker-phploc.git
+[submodule "phpmd"]
+	path = phpmd
+	url = https://github.com/RichVRed/docker-phpmd.git
+[submodule "phpsa"]
+	path = phpsa
+	url = https://github.com/RichVRed/docker-phpsa.git
+[submodule "phpspec"]
+	path = phpspec
+	url = https://github.com/RichVRed/docker-phpspec.git
+[submodule "phpstan"]
+	path = phpstan
+	url = https://github.com/RichVRed/docker-phpstan.git
+[submodule "phpunit"]
+	path = phpunit
+	url = https://github.com/RichVRed/docker-phpunit.git
+[submodule "psalm"]
+	path = psalm
+	url = https://github.com/RichVRed/docker-psalm.git
+[submodule "psecio-parse"]
+	path = psecio-parse
+	url = https://github.com/RichVRed/docker-psecio-parse.git
+[submodule "tuli"]
+	path = tuli
+	url = https://github.com/RichVRed/docker-tuli.git

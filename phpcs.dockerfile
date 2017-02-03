@@ -1,15 +1,53 @@
 # BUILD:
-# sudo docker build --force-rm --tag "rvannauker/phpcs" --file phpcs.dockerfile .
+# docker build --force-rm --tag "rvannauker/phpcs" --file phpcs.dockerfile .
 # SUGGESTED BUILD:
-# sudo docker build --force-rm --build-arg COLORS=1 --build-arg SHOW_PROGRESS=1 --build-arg REPORT_WIDTH=140 --build-arg ENCODING=utf-8 --build-arg REPORT_FORMAT=full --tag "rvannauker/phpcs" --file phpcs.dockerfile .
+# docker build --force-rm --build-arg COLORS=1 --build-arg SHOW_PROGRESS=1 --build-arg REPORT_WIDTH=140 --build-arg ENCODING=utf-8 --build-arg REPORT_FORMAT=full --tag "rvannauker/phpcs" --file phpcs.dockerfile .
 # RUN:
-# sudo docker run --rm --volume $(pwd):/workspace --name="phpcs" "rvannauker/phpcs" --config-set colors=1 --standard="PSR2" -v {destination}
+# docker run --rm --volume $(pwd):/workspace --name="phpcs" "rvannauker/phpcs" --config-set colors=1 --standard="PSR2" -v {destination}
 # PACKAGE: PHP_CodeSniffer
 # PACKAGE REPOSITORY: https://github.com/squizlabs/PHP_CodeSniffer
 # DESCRIPTION: PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.
 # CONFIGURATION: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options
 FROM alpine:latest
-MAINTAINER Richard Vannauker <richard.vannauker@directenergy.com>
+MAINTAINER Richard Vannauker <richard.vannauker@gmail.com>
+# Build-time metadata as defined at http://label-schema.org
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+LABEL     org.label-schema.schema-version="1.0" \
+          org.label-schema.build-date="$BUILD_DATE" \
+          org.label-schema.version="$VERSION" \
+          org.label-schema.name="" \
+          org.label-schema.description="" \
+          org.label-schema.vendor="SEOHEAT LLC" \
+          org.label-schema.url="" \
+          org.label-schema.vcs-ref="$VCS_REF" \
+          org.label-schema.vcs-url="" \
+          org.label-schema.usage="" \
+          org.label-schema.docker.cmd="" \
+          org.label-schema.docker.cmd.devel="" \
+          org.label-schema.docker.cmd.test="" \
+          org.label-schema.docker.cmd.debug="" \
+          org.label-schema.docker.cmd.help="" \
+          org.label-schema.docker.params="" \
+          org.label-schema.rkt.cmd="" \
+          org.label-schema.rkt.cmd.devel="" \
+          org.label-schema.rkt.cmd.test="" \
+          org.label-schema.rkt.cmd.debug="" \
+          org.label-schema.rkt.cmd.help="" \
+          org.label-schema.rkt.params="" \
+          com.amazonaws.ecs.task-arn="" \
+          com.amazonaws.ecs.container-name="" \
+          com.amazonaws.ecs.task-definition-family="" \
+          com.amazonaws.ecs.task-definition-version="" \
+          com.amazonaws.ecs.cluster=""
+
+RUN mkdir -p /workspace
+WORKDIR /workspace
+VOLUME /workspace
+
+# Additional tools
+ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
 
 # PHP binary & extensions
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
@@ -21,9 +59,6 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
            php5-phar \
            php5-ctype \
     && rm -rf /var/cache/apk/*
-
-# Additional tools
-ADD https://getcomposer.org/composer.phar /usr/local/bin/composer
 
 # Make the tools executable and install the tools
 RUN chmod +x /usr/local/bin/composer \
@@ -88,9 +123,5 @@ RUN /root/.composer/vendor/bin/phpcs --config-set colors ${COLORS} && \
 #
 #    /root/.composer/vendor/bin/phpcs --config-set jsl_path /path/to/jsl && \
 #    /root/.composer/vendor/bin/phpcs --config-set zend_ca_path /path/to/ZendCodeAnalyzer
-
-
-RUN mkdir -p /workspace
-WORKDIR /workspace
 
 ENTRYPOINT ["phpcs"]
